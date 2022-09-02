@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myTodo">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="JS/todo.js"></script>
+    <title>ToDo App</title>
+</head>
+<body ng-controller="myCtrl">
+
+    <header class="navbar-fixed">
+        <nav class="cyan darken-3" id="nav1">
+            <div class="nav-wrapper">
+                <img src="images/augtra.png" class="img-logo">
+                <a href="#" class="brand-logo left"></img>Augtra Technologies</a>
+            </div>
+        </nav><br>
+        <nav class="cyan darken-3" id="nav2">
+            <div class="nav-wrapper">
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="waves-effect waves-light pink darken-4 btn-large" id="btn">ADD TASK</a></li>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div class="container" style="width: 98%; height: 450px; border-radius: 10px;" id="table-cont">
+                <div class="row">
+                    <div class="col s12" style="border-radius: 10px 10px 0px 0px; background-color: whitesmoke;" id="heading-color"><h4 class="heading">Employees Task Details</h4></div>
+                </div> 
+                <table class="centered striped responsive-table">
+                    <thead>
+                      <tr>
+                          <th>S.NO</th>
+                          <th>ASSIGNED</th>
+                          <th>TASK NAME</th>
+                          <th>STATUS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="worker in workers">
+                        <td>{{ worker.sno }}</td>
+                        <td>{{ worker.assigned }}</td>
+                        <td>{{ worker.task }}</td>
+                        <td>{{ worker.status }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        
+    </main>
+    <footer></footer>    
+</body>
+</html>

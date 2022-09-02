@@ -1,0 +1,43 @@
+.img-logo{
+    height: 63px;
+    margin-left: 4.5px;
+}
+
+.brand-logo{
+    margin-left: 5px;
+    margin-top: -5px;
+}
+
+#nav2{
+    margin-top: 41.5px;
+}
+
+#table-cont{
+    margin-top: 80px;
+    margin:4px, 4px;
+    padding:4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+
+.heading{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    font-weight: 500;
+}
+
+#heading-color{
+    background-color: darkgrey;
+}
+
+#btn{
+    margin-top: -6px;
+    margin-bottom: -2px;
+    height: 61px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+}
