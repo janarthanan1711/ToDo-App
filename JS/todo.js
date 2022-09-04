@@ -20,8 +20,6 @@ todo.controller("myCtrl",function($scope,$state){
         $state.go("page1");
     };
 });
-
-
 todo.controller("page1controller",function($scope,$state){
     $scope.firstFunction = function(){
         $state.go("page2");
