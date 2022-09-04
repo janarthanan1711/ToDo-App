@@ -26,27 +26,26 @@ todo.controller("page1controller",function($scope,$state){
     $scope.firstFunction = function(){
         $state.go("page2");
     }
-    $scope.formPage = function(){
-            document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.datepicker');
-            M.Datepicker.init(elems);
-          });
-
-        let names = [
-            {names:"Ashiq"},
-            {names:"Ashik"},
-            {names:"Janarthanan"},
-            {names:"Karunakaran"},
-            {names:"Manoj"},
-            {names:"Vignesh"},
-            {names:"Yuvan"}
-        ];
-        $scope.names = names;
-    }
+    let names = [
+        {names: ""},
+        {names:"Ashiq"},
+        {names:"Ashik"},
+        {names:"Janarthanan"},
+        {names:"Karunakaran"},
+        {names:"Manoj"},
+        {names:"Vignesh"},
+        {names:"Yuvan"}
+    ];
+    $scope.names = names;
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var elems = document.querySelectorAll('.datepicker');
+    //     var instances = M.Datepicker.init(elems);
+    //     console.log(instances);
+    //     elems.datepicker();
+    //     elems.setDate(new Date());
+    //     console.log(elems);
+    //   });
 });
-
-
-
 todo.controller("page2controller",function($scope,$state){
     let workers = [
         {

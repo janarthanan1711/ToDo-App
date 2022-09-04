@@ -9,15 +9,17 @@
                     <div>
                         <form>
                             <label for="taskname" id="form-title">TASKNAME: </label>  
-                            <input type="text" id="taskname" name="firstname"/><br>
-                            <label id="form-title">ASSIGN: </label>
+                            <input type="text" id="taskname" name="firstname"/><br><br>
+                            <label id="form-title">ASSIGN: </label><br>
                             <select class="browser-default">
                               <option ng-repeat="x in names">{{ x.names }}</option>
-                            </select><br>
+                            </select><br><br>
                             <label for="textarea1" id="form-title">COMMENTS: </label>
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <br><br>
                             <label for="datepicker" id="form-title">DURATION: </label> 
-                            <input type="text" class="datepicker" name="datepicker">
+                            <i class="material-icons prefix" id="date-icon">date_range</i>
+                            <input type="text" class="datepicker">
                             <a class="waves-effect waves-light pink darken-4 btn-large right" ui-sref="#!/page2" ng-click="firstFunction()"><i class="material-icons right" id="btn2">check</i>SUBMIT</a>
                         </form>
                     </div>  
