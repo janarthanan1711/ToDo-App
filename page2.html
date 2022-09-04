@@ -1,0 +1,26 @@
+<div ng-controller="page2controller">
+    <div class="container" id="table-cont">
+        <div class="row">
+            <div class="col s12" style="border-radius: 10px 10px 0px 0px; background-color: whitesmoke;" id="heading-color"><h4 class="heading">Employees Task Details</h4></div>
+        </div> 
+        <table class="centered striped responsive-table">
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>ASSIGNED</th>
+                    <th>TASK NAME</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+                <tbody>
+                  <tr ng-repeat="worker in workers">
+                    <td>{{ worker.sno }}</td>
+                    <td>{{ worker.assigned }}</td>
+                    <td>{{ worker.task }}</td>
+                    <td>{{ worker.status }}</td>
+                  </tr>
+                </tbody>
+        </table>
+    </div>   
+</div>  
+

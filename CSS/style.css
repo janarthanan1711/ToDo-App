@@ -1,3 +1,6 @@
+body{
+    background-color: #e0e0e0;
+}
 .img-logo{
     height: 63px;
     margin-left: 4.5px;
@@ -13,12 +16,21 @@
 }
 
 #table-cont{
-    margin-top: 80px;
+    width: 100%;
+    border-radius: 10px;
     margin:4px, 4px;
     padding:4px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
+}
+
+#table-cont2{
+    width: 50%;
+    height: 450px;
+    border-radius: 10px;
+    margin:4px, 4px;
+    padding:4px;
 }
 
 .heading{
@@ -29,7 +41,12 @@
 }
 
 #heading-color{
-    background-color: darkgrey;
+    border-radius: 10px 10px 10px 10px;
+    background-color: whitesmoke;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    font-weight: 500;
 }
 
 #btn{
@@ -39,5 +56,35 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    width: 160px;
+    width: 140px;
 }
+
+
+#img-logo2{
+    height: 63px;
+    margin-left: 4.5px;
+}
+
+#nav23{
+    margin-top: 41.5px;
+}
+
+#viewPage{
+    width: 98%;
+    height: 450px;
+    border-radius: 10px;
+    margin-top: 80px;
+    margin:4px, 4px;
+    padding:4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    /* background-color: #cfd8dc; */
+}
+
+#form-title{
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+}
+
