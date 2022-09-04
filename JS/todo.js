@@ -21,23 +21,31 @@ todo.controller("myCtrl",function($scope,$state){
     };
 });
 
+
 todo.controller("page1controller",function($scope,$state){
     $scope.firstFunction = function(){
         $state.go("page2");
     }
-})
-todo.controller("page1controller",function($scope){
+    $scope.formPage = function(){
+            document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.datepicker');
+            M.Datepicker.init(elems);
+          });
+
         let names = [
-            "Ashiq",
-            "Ashik",
-            "Janarthanan",
-            "Karunakaran",
-            "Manoj",
-            "Vignesh",
-            "Yuvan"
+            {names:"Ashiq"},
+            {names:"Ashik"},
+            {names:"Janarthanan"},
+            {names:"Karunakaran"},
+            {names:"Manoj"},
+            {names:"Vignesh"},
+            {names:"Yuvan"}
         ];
         $scope.names = names;
+    }
 });
+
+
 
 todo.controller("page2controller",function($scope,$state){
     let workers = [
@@ -86,6 +94,15 @@ todo.controller("page2controller",function($scope,$state){
     ];
     $scope.workers = workers;
 });
+
+
+
+
+
+  
+
+
+
 
 
 

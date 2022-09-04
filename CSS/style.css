@@ -2,7 +2,7 @@ body{
     background-color: #e0e0e0;
 }
 .img-logo{
-    height: 63px;
+    height: 62px;
     margin-left: 4.5px;
 }
 
@@ -79,7 +79,6 @@ body{
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
-    /* background-color: #cfd8dc; */
 }
 
 #form-title{

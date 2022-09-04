@@ -1,5 +1,5 @@
 <div ng-controller="page1controller">
-    <main>
+    <main ng-init="formPage()">
         <div>
             <div class="container" id="table-cont2">
                 <div class="row">
@@ -10,15 +10,14 @@
                         <form>
                             <label for="taskname" id="form-title">TASKNAME: </label>  
                             <input type="text" id="taskname" name="firstname"/><br>
-                            <select>
-                                Assign: <option ng-repeat="x in names">{{ x.names }}</option>
-                            </select>
                             <label id="form-title">ASSIGN: </label>
                             <select class="browser-default">
                               <option ng-repeat="x in names">{{ x.names }}</option>
                             </select><br>
                             <label for="textarea1" id="form-title">COMMENTS: </label>
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="datepicker" id="form-title">DURATION: </label> 
+                            <input type="text" class="datepicker" name="datepicker">
                             <a class="waves-effect waves-light pink darken-4 btn-large right" ui-sref="#!/page2" ng-click="firstFunction()"><i class="material-icons right" id="btn2">check</i>SUBMIT</a>
                         </form>
                     </div>  
