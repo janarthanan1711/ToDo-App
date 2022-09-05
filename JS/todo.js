@@ -2,6 +2,11 @@ var todo = angular.module("myTodo",["ui.router"]);
 
 todo.config(["$stateProvider",function($stateProvider,$locationProvider,$urlRouterProvider){
     $stateProvider
+    // .state("root",{
+    //     url: '/',
+    //     templateUrl: "page2.html",
+    //     controller:"page2controller"
+    // })
     .state('page2', {
         url: '/page2',
         templateUrl :"page2.html",
@@ -23,6 +28,7 @@ todo.controller("myCtrl",function($scope,$state){
 todo.controller("page1controller",function($scope,$state){
     $scope.firstFunction = function(){
         $state.go("page2");
+        
     }
     let names = [
         {names: ""},
@@ -35,14 +41,14 @@ todo.controller("page1controller",function($scope,$state){
         {names:"Yuvan"}
     ];
     $scope.names = names;
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     var elems = document.querySelectorAll('.datepicker');
-    //     var instances = M.Datepicker.init(elems);
-    //     console.log(instances);
-    //     elems.datepicker();
-    //     elems.setDate(new Date());
-    //     console.log(elems);
-    //   });
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems);
+        console.log(instances);
+        elems.datepicker();
+        elems.setDate(new Date());
+        console.log(elems);
+      });
 });
 todo.controller("page2controller",function($scope,$state){
     let workers = [
