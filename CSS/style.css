@@ -11,9 +11,9 @@ body{
     margin-top: -5px;
 }
 
-#nav2{
+/* #nav2{
     margin-top: 41.5px;
-}
+} */
 
 #table-cont{
     width: 100%;
@@ -65,15 +65,15 @@ body{
     margin-left: 4.5px;
 }
 
-#nav23{
+/* #nav23{
     margin-top: 41.5px;
-}
+} */
 
 #viewPage{
-    width: 98%;
+    width: 2000px;
     height: 450px;
     border-radius: 10px;
-    margin-top: 80px;
+    margin-top: 39px;
     margin:4px, 4px;
     padding:4px;
     overflow-x: hidden;

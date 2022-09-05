@@ -1,12 +1,14 @@
 var todo = angular.module("myTodo",["ui.router"]);
 
+
 todo.config(["$stateProvider",function($stateProvider,$locationProvider,$urlRouterProvider){
+    // $urlRouterProvider.otherwise("");
     $stateProvider
-    // .state("root",{
-    //     url: '/',
-    //     templateUrl: "page2.html",
-    //     controller:"page2controller"
-    // })
+    .state('app', {
+        url: '',
+        templateUrl :"page2.html",
+        controller : "page1controller"
+    })
     .state('page2', {
         url: '/page2',
         templateUrl :"page2.html",
@@ -17,12 +19,16 @@ todo.config(["$stateProvider",function($stateProvider,$locationProvider,$urlRout
         templateUrl: "page1.html",
         controller: "myCtrl",
     });
-    // $urlRouterProvider.otherwise('/')
+    // $urlRouterProvider.otherwise('/page2');
+    // $urlRouterProvider.when('/page2', '/page2');
 }]);
 
 todo.controller("myCtrl",function($scope,$state){
     $scope.secondFunction = function(){
+        $state.go("app");
         $state.go("page1");
+        
+        // $state.go("nav");
     };
 });
 todo.controller("page1controller",function($scope,$state){
@@ -41,14 +47,6 @@ todo.controller("page1controller",function($scope,$state){
         {names:"Yuvan"}
     ];
     $scope.names = names;
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.datepicker');
-        var instances = M.Datepicker.init(elems);
-        console.log(instances);
-        elems.datepicker();
-        elems.setDate(new Date());
-        console.log(elems);
-      });
 });
 todo.controller("page2controller",function($scope,$state){
     let workers = [
@@ -96,7 +94,13 @@ todo.controller("page2controller",function($scope,$state){
         }   
     ];
     $scope.workers = workers;
+
+   // document.addEventListener('DOMContentLoaded', function() {
+    //     var elems = document.querySelectorAll('.datepicker');
+    //     M.Datepicker.init(elems);
+    //   });    
 });
+
 
 
 
