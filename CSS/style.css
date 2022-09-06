@@ -77,10 +77,6 @@ body{
     margin-left: 4.5px;
 }
 
-/* #nav23{
-    margin-top: 41.5px;
-} */
-
 #viewPage{
     width: 2000px;
     height: 450px;
@@ -98,8 +94,14 @@ body{
     font-size: 22px;
     color: black;
 }
-/* 
-#date-icon{
-    margin-top: 10px;
-} */
+
+#formalert{
+    margin-bottom: 60px;
+}
+
+
+.error{
+    color:red;
+}
+
 
