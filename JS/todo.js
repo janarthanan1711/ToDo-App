@@ -18,17 +18,22 @@ todo.config(["$stateProvider",function($stateProvider,$locationProvider,$urlRout
         url: "/page1",
         templateUrl: "page1.html",
         controller: "myCtrl",
-    });
-    // $urlRouterProvider.otherwise('/page2');
-    // $urlRouterProvider.when('/page2', '/page2');
-}]);
+    })
+    // .state("app",{
+    //     url: "",
+    //     views: {
+    //         "" : {templateUrl: "app.html"},
 
+    //         "navbar1@app": "navbar1.html",
+    //         controller: "navbar1control",
+    //     }
+    // });
+}]);
+  
 todo.controller("myCtrl",function($scope,$state){
     $scope.secondFunction = function(){
         $state.go("app");
         $state.go("page1");
-        
-        // $state.go("nav");
     };
 });
 todo.controller("page1controller",function($scope,$state){
@@ -100,6 +105,17 @@ todo.controller("page2controller",function($scope,$state){
     //     M.Datepicker.init(elems);
     //   });    
 });
+
+// app.directive('navbar1', function() {
+//     return {
+//         restrict : 'EA',
+//         templateUrl : "navbar1.html",
+//         replace : true
+//     };
+//     //
+// }); 
+
+
 
 
 
