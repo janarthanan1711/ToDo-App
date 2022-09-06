@@ -50,13 +50,25 @@ body{
 }
 
 #btn{
+    margin-top: -104px;
+    margin-bottom: 29px;
+    height: 62px;
+    width: 140px;
+    margin-right: 5px;
+}
+
+#btn1{
+    margin-right: 1100px;
+    width: 140px;
+    height: 62px;
     margin-top: -6px;
     margin-bottom: -2px;
-    height: 61px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+}
+
+#btn3{
+    height: 62px;
     width: 140px;
+    margin-right: 5px;
 }
 
 

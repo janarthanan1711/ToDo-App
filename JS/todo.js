@@ -4,37 +4,67 @@ var todo = angular.module("myTodo",["ui.router"]);
 todo.config(["$stateProvider",function($stateProvider,$locationProvider,$urlRouterProvider){
     // $urlRouterProvider.otherwise("");
     $stateProvider
-    .state('app', {
-        url: '',
-        templateUrl :"page2.html",
-        controller : "page1controller"
+    .state("app",{
+        url: "",
+        views:{
+            "":{
+                templateUrl: "page2.html",
+                controller: "page1controller"
+            },
+            "navbar1":{
+                url: "/page1",
+                templateUrl: "navbar1.html",
+                controller: "navbar1control"
+            }
+        }
     })
     .state('page2', {
         url: '/page2',
-        templateUrl :"page2.html",
-        controller : "page1controller"
+        views:{
+            "":{
+                templateUrl :"page2.html",
+                controller : "page1controller"
+            },
+            "navbar2":{
+                url: "/page2",
+                templateUrl: "navbar1.html",
+                controller: "navbar1control"
+            }
+        }
     })
     .state("page1",{
         url: "/page1",
-        templateUrl: "page1.html",
-        controller: "myCtrl",
+        views:{
+            "":{
+                templateUrl :"page1.html",
+                controller : "navbar1control"
+            },
+            "navbar2":{
+                url: "/page2",
+                templateUrl: "navbar2.html",
+                controller: "navbar2control"
+            }
+        }
     })
-    // .state("app",{
-    //     url: "",
-    //     views: {
-    //         "" : {templateUrl: "app.html"},
-
-    //         "navbar1@app": "navbar1.html",
-    //         controller: "navbar1control",
-    //     }
-    // });
 }]);
-  
-todo.controller("myCtrl",function($scope,$state){
+
+todo.controller("navbar2control",function($scope,$state){
+    $scope.mainFunction = function(){
+        $state.go("page2")
+    }
+    $scope.thirdFunction = function(){
+        $state.go("page2")
+    }
+})
+
+todo.controller("navbar1control",function($scope,$state){
     $scope.secondFunction = function(){
-        $state.go("app");
         $state.go("page1");
     };
+})
+  
+todo.controller("myCtrl",function($scope,$state){
+        $state.go("app");
 });
 todo.controller("page1controller",function($scope,$state){
     $scope.firstFunction = function(){
