@@ -2,7 +2,6 @@ var todo = angular.module("myTodo",["ui.router"]);
 
 
 todo.config(["$stateProvider",function($stateProvider,$locationProvider,$urlRouterProvider){
-    // $urlRouterProvider.otherwise("");
     $stateProvider
     .state("app",{
         url: "",
@@ -45,7 +44,7 @@ todo.config(["$stateProvider",function($stateProvider,$locationProvider,$urlRout
                 controller: "navbar2control"
             }
         }
-    })
+    });
 }]);
 
 todo.controller("navbar2control",function($scope,$state){
@@ -136,14 +135,6 @@ todo.controller("page2controller",function($scope,$state){
     //   });    
 });
 
-// app.directive('navbar1', function() {
-//     return {
-//         restrict : 'EA',
-//         templateUrl : "navbar1.html",
-//         replace : true
-//     };
-//     //
-// }); 
 
 
 
