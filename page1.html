@@ -10,16 +10,16 @@
                         <form name="employeeForm" novalidate>
                             <label for="taskname" id="form-title">TASKNAME: </label>  
                             <input type="text" id="taskname" name="taskname" ng-model="taskname" required><br>
-                            <span class="error" ng-show="employeeForm.taskname.$error.required || employeeForm.taskname.$invalid">This is a required field</span><br>
+                            <span class="error" ng-show="employeeForm.taskname.$error.required || employeeForm.taskname.$invalid || employeeForm.taskname.$dirty">This is a required field</span><br>
                             <label id="form-title">ASSIGN: </label><br>
                             <select class="browser-default" ng-model="assign" name="assign" required>
                               <option ng-repeat="x in names">{{ x.names }}</option>
                             </select><br>
-                            <span class="error" ng-show="employeeForm.assign.$error.required || employeeForm.assign.$invalid">This is a required field</span><br>
+                            <span class="error" ng-show="employeeForm.assign.$error.required || employeeForm.assign.$invalid || employeeForm.taskname.$dirty">This is a required field</span><br>
                             <label for="textarea1" id="form-title">COMMENTS: </label>
                             <textarea id="textarea1" name="comments" ng-model="comments" class="materialize-textarea" required></textarea>
                             <br>
-                            <span class="error" ng-show="employeeForm.comments.$error.required || employeeForm.comments.$invalid">This is a required field</span><br>
+                            <span class="error" ng-show="employeeForm.comments.$error.required || employeeForm.comments.$invalid || employeeForm.taskname.$dirty">This is a required field</span><br>
                             <label for="datepicker" id="form-title">DURATION: </label> 
                             <!-- <i class="material-icons prefix" id="date-icon">date_range</i> -->
                             <input type="date" class="datepicker" bg-model="dates" name="dates" required>
