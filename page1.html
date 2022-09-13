@@ -9,22 +9,22 @@
                     <div>
                         <form name="employeeForm" novalidate>
                             <label for="taskname" id="form-title">TASKNAME: </label>  
-                            <input type="text" id="taskname" name="taskname" ng-model="taskname" required><br>
-                            <span class="error" ng-show="employeeForm.taskname.$invalid && employeeForm.taskname.$dirty">This is a required field</span><br>
+                            <input type="text" id="taskname" name="taskname" ng-model="taskname" ng-required="true"><br>
+                            <span class="error" ng-show="employeeForm.taskname.$invalid && employeeForm.taskname.$touched">This is a required field</span><br>
                             <label id="form-title">ASSIGN: </label><br>
-                            <select class="browser-default" ng-model="assign" name="assign" required>
+                            <select class="browser-default" ng-model="assign" name="assign" ng-required="true">
                               <option ng-repeat="x in names">{{ x.names }}</option>
                             </select><br>
-                            <span class="error" ng-show="employeeForm.assign.$invalid && employeeForm.taskname.$dirty">This is a required field</span><br>
+                            <span class="error" ng-show="employeeForm.assign.$invalid && employeeForm.taskname.$touched">This is a required field</span><br>
                             <label for="textarea1" id="form-title">COMMENTS: </label>
-                            <textarea id="textarea1" name="comments" ng-model="comments" class="materialize-textarea" required></textarea>
+                            <textarea id="textarea1" name="comments" ng-model="comments" class="materialize-textarea" ng-required="true"></textarea>
                             <br>
-                            <span class="error" ng-show="employeeForm.comments.$invalid && employeeForm.taskname.$dirty">This is a required field</span><br>
+                            <span class="error" ng-show="employeeForm.comments.$invalid && employeeForm.taskname.$touched">This is a required field</span><br>
                             <label for="datepicker" id="form-title">DURATION: </label> 
                             <!-- <i class="material-icons prefix" id="date-icon">date_range</i> -->
-                            <input type="date" class="datepicker" bg-model="dates" name="dates" required>
-                            <!-- <span class="error" ng-show="employeeForm.dates.$error.required">This is a required field</span><br> -->
-                            <a class="waves-effect waves-light pink darken-4 btn-large right" ui-sref="#!/page2" ng-click="firstFunction()"><i class="material-icons right" id="btn2">check</i>SUBMIT</a>
+                            <input type="date" class="datepicker" bg-model="dates" name="dates" ng-required="true">
+                            <span class="error" ng-show="employeeForm.assign.$invalid && employeeForm.taskname.$touched">This is a required field</span><br>
+                            <a class="waves-effect waves-light pink darken-4 btn-large right" ui-sref="#!/page2" ng-disabled="employeeForm.$invalid" ng-click="firstFunction()"><i class="material-icons right" id="btn2">check</i>SUBMIT</a>
                         </form>
                     </div>  
                 </div>             

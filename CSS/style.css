@@ -101,4 +101,15 @@ body{
     color:red;
 }
 
+textarea.ng-invalid.ng-touched,select.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+#taskname.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+
+
+
 
